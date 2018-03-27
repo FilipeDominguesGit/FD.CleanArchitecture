@@ -5,11 +5,11 @@ using FD.CleanArchitecture.Core.Interactor;
 
 namespace App.Core.UseCases.SearchBlogPosts
 {
-    public class SearchBlogPosts : IInteractor<SearchBlogPostsRequest, SearchBlogPostsResponse>
+    public class SearchBlogPostsInteractor : IInteractor<SearchBlogPostsRequest, SearchBlogPostsResponse>
     {
         private readonly ISearchBlogPostsGateway _gateway;
 
-        public SearchBlogPosts( ISearchBlogPostsGateway gateway) 
+        public SearchBlogPostsInteractor( ISearchBlogPostsGateway gateway) 
         {
             _gateway = gateway;
         }
