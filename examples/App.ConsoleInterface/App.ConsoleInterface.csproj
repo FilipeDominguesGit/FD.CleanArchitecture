@@ -3,11 +3,14 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp2.0</TargetFramework>
+    <AssemblyName>App.ConsoleInterface</AssemblyName>
+    <RootNamespace>App.ConsoleInterface</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\..\src\FD.CleanArchitecture.Core\FD.CleanArchitecture.Core.csproj" />
-    <ProjectReference Include="..\AppCore\AppCore.csproj" />
+    <ProjectReference Include="..\App.Core\App.Core.csproj" />
+    <ProjectReference Include="..\App.Infrastructure\App.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

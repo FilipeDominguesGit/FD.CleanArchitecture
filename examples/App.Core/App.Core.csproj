@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <AssemblyName>App.Core</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\FD.CleanArchitecture.Core\FD.CleanArchitecture.Core.csproj" />
+    <ProjectReference Include="..\App.Core.Entities\App.Core.Entities.csproj" />
+  </ItemGroup>
+
+</Project>
