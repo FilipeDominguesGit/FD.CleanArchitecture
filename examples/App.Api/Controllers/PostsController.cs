@@ -13,10 +13,11 @@ namespace App.Api.Controllers
         [HttpGet]
         public IActionResult GetAllPosts([FromQuery]string search,[FromQuery]int? nRecords = null,[FromQuery]int? page=null)
         {
-            var outputboundary = new SearchBlogPostOutputBoundary();
             var gateway = new SearchBlogPostsGateway();
-            var usecase = new SearchBlogPosts(outputboundary,gateway);
-            usecase.Execute(new SearchBlogPostsRequest(search,nRecords,page));
+            var usecase = new SearchBlogPosts(gateway);
+
+            var outputboundary = new SearchBlogPostOutputBoundary();
+            usecase.Execute(new SearchBlogPostsRequest(search,nRecords,page), outputboundary);
 
             if(outputboundary.Success)
                 return Json(outputboundary.Result);

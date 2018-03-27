@@ -12,9 +12,9 @@ namespace App.ConsoleInterface
             var outputBoundary = new SearchBlogPostsOutputBoundary();
             outputBoundary.OnResponseReceived += Console.WriteLine;
             var gateway = new SearchBlogPostsGateway();
-            var usecase = new SearchBlogPosts(outputBoundary,gateway);
+            var usecase = new SearchBlogPosts(gateway);
 
-            usecase.Execute(request);
+            usecase.Execute(request, outputBoundary);
 
             Console.ReadKey();
 

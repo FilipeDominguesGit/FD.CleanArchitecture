@@ -5,16 +5,16 @@ using FD.CleanArchitecture.Core.Interactor;
 
 namespace App.Core.UseCases.SearchBlogPosts
 {
-    public class SearchBlogPosts : Interactor<SearchBlogPostsRequest, SearchBlogPostsResponse>
+    public class SearchBlogPosts : IInteractor<SearchBlogPostsRequest, SearchBlogPostsResponse>
     {
         private readonly ISearchBlogPostsGateway _gateway;
 
-        public SearchBlogPosts(IOutputBoundary<SearchBlogPostsResponse> outputBoundary, ISearchBlogPostsGateway gateway) : base(outputBoundary)
+        public SearchBlogPosts( ISearchBlogPostsGateway gateway) 
         {
             _gateway = gateway;
         }
 
-        public override void Execute(SearchBlogPostsRequest request)
+        public void Execute(SearchBlogPostsRequest request, IOutputBoundary<SearchBlogPostsResponse> outputBoundary)
         {
             try
             {
@@ -29,11 +29,11 @@ namespace App.Core.UseCases.SearchBlogPosts
                                     })
                                 );
 
-                OutputBoundary.PublishSuccess(response);
+                outputBoundary.PublishSuccess(response);
             }
             catch (Exception e)
             {
-                OutputBoundary.PublishError(e.Message);
+                outputBoundary.PublishError(e.Message);
             }
         }
     }

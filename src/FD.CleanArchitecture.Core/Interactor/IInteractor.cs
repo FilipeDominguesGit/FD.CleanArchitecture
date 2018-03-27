@@ -2,10 +2,9 @@
 
 namespace FD.CleanArchitecture.Core.Interactor
 {
-    public interface IInteractor<in TRequest, in TResponse> : IInputBoundary<TRequest> 
+    public interface IInteractor<in TRequest, out TResponse> : IInputBoundary<TRequest,TResponse> 
         where TRequest : IRequest 
         where TResponse : IReponse
     {
-        IOutputBoundary<TResponse> OutputBoundary { get; }
     }
 }
