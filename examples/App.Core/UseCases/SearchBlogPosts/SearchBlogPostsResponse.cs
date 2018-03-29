@@ -4,7 +4,7 @@ using FD.CleanArchitecture.Core.Boundary;
 
 namespace App.Core.UseCases.SearchBlogPosts
 {
-    public class SearchBlogPostsResponse : IReponse
+    public class SearchBlogPostsResponse : IResponse
     {
         public IEnumerable<BlogSearchResultDto>  Post { get; }
 

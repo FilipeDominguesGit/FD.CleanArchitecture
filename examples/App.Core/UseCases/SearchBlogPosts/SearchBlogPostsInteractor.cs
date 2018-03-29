@@ -9,32 +9,36 @@ namespace App.Core.UseCases.SearchBlogPosts
     {
         private readonly ISearchBlogPostsGateway _gateway;
 
-        public SearchBlogPostsInteractor( ISearchBlogPostsGateway gateway) 
+        public SearchBlogPostsInteractor( ISearchBlogPostsGateway gateway,IOutputBoundary<SearchBlogPostsResponse> outputboundary) 
         {
             _gateway = gateway;
+            OutputBoundary = outputboundary;
         }
 
-        public void Execute(SearchBlogPostsRequest request, IOutputBoundary<SearchBlogPostsResponse> outputBoundary)
+
+        public void Execute(SearchBlogPostsRequest request)
         {
             try
             {
                 var blogposts = _gateway.Search(request.Search, request.NumberOfRecords, request.Page);
 
                 var response = new SearchBlogPostsResponse(
-                                    blogposts.Select(p => new BlogSearchResultDto()
-                                    {
-                                        CreationDate = p.CreationDate,
-                                        Id = p.Id,
-                                        Title = p.Title
-                                    })
-                                );
+                    blogposts.Select(p => new BlogSearchResultDto()
+                    {
+                        CreationDate = p.CreationDate,
+                        Id = p.Id,
+                        Title = p.Title
+                    })
+                );
 
-                outputBoundary.PublishSuccess(response);
+                OutputBoundary.PublishSuccess(response);
             }
             catch (Exception e)
             {
-                outputBoundary.PublishError(e.Message);
+                OutputBoundary.PublishError(e.Message);
             }
         }
+
+        public IOutputBoundary<SearchBlogPostsResponse> OutputBoundary { get; set; }
     }
 }

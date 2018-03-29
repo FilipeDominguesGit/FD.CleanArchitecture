@@ -24,10 +24,10 @@ namespace App.Api.Controllers
            // var gateway = new SearchBlogPostsGateway();
             //var usecase = new SearchBlogPostsInteractor(gateway);
 
-            var usecase = _factory.Create<SearchBlogPostsRequest, SearchBlogPostsResponse>();
-
             var outputboundary = new SearchBlogPostOutputBoundary();
-            usecase.Execute(new SearchBlogPostsRequest(search,nRecords,page), outputboundary);
+            var usecase = _factory.Create<SearchBlogPostsRequest, SearchBlogPostsResponse>(outputboundary);
+
+            usecase.Execute(new SearchBlogPostsRequest(search,nRecords,page));
 
             if(outputboundary.Success)
                 return Json(outputboundary.Result);
