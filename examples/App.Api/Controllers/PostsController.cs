@@ -1,9 +1,8 @@
-﻿using App.Api.OutputBoundaries;
-using App.Core.UseCases;
+﻿using App.Api.Extensions;
 using App.Core.UseCases.SearchBlogPosts;
-using App.Infrastructure;
 using FD.CleanArchitecture.Core.Interactor;
 using Microsoft.AspNetCore.Mvc;
+using System;
 
 namespace App.Api.Controllers
 {
@@ -21,17 +20,18 @@ namespace App.Api.Controllers
         [HttpGet]
         public IActionResult GetAllPosts([FromQuery]string search,[FromQuery]int? nRecords = null,[FromQuery]int? page=null)
         {
-           // var gateway = new SearchBlogPostsGateway();
-            //var usecase = new SearchBlogPostsInteractor(gateway);
+            var usecase = _factory.Create<SearchBlogPostsRequest, SearchBlogPostsResponse>();
 
-            var outputboundary = new SearchBlogPostOutputBoundary();
-            var usecase = _factory.Create<SearchBlogPostsRequest, SearchBlogPostsResponse>(outputboundary);
-
-            usecase.Execute(new SearchBlogPostsRequest(search,nRecords,page));
-
-            if(outputboundary.Success)
-                return Json(outputboundary.Result);
-            return StatusCode(500, outputboundary.ErrorMessage);
+            try
+            {
+                var viewModel = usecase.Execute(new SearchBlogPostsRequest(search, nRecords, page)).ToViewModel();
+                return Json(viewModel);
+            }
+            catch (Exception e)
+            {
+                return StatusCode(500, e);
+            }
+           
         }
     }
 }

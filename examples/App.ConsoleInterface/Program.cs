@@ -1,22 +1,30 @@
 ﻿using App.Core.UseCases.SearchBlogPosts;
-using App.Infrastructure;
+using Castle.Windsor;
+using Castle.Windsor.Installer;
+using FD.CleanArchitecture.Core.Interactor;
 using System;
+using System.Reflection;
 
 namespace App.ConsoleInterface
 {
-    class Program
+    class Program 
     {
         static void Main(string[] args)
         {
-            var request = new SearchBlogPostsRequest(string.Empty, null,null);
-            var outputBoundary = new SearchBlogPostsOutputBoundary();
-            outputBoundary.OnResponseReceived += Console.WriteLine;
-            var gateway = new SearchBlogPostsGateway();
-            var usecase = new SearchBlogPostsInteractor(gateway);
+            var container = new WindsorContainer();
 
+            container.Install(FromAssembly.InThisApplication(Assembly.GetEntryAssembly()));
 
-            usecase.Execute(request, outputBoundary);
+            var factory = container.Resolve<IInteractorsFactory>();
 
+            var outputboundary = new ConsolePresenter();
+            var request = new SearchBlogPostsRequest(string.Empty, null, null);
+            var usecase = factory.Create<SearchBlogPostsRequest, SearchBlogPostsResponse>(outputboundary);
+
+            //var outputBoundary = new ConsolePresenter();
+            //var gateway = new SearchBlogPostsGateway();
+            //var usecase = new SearchBlogPostsInteractor(gateway, outputBoundary);
+            usecase.Execute(request);
             Console.ReadKey();
 
         }

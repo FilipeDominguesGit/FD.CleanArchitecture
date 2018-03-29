@@ -8,9 +8,19 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Castle.Windsor" Version="4.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\..\src\FD.CleanArchitecture.Core\FD.CleanArchitecture.Core.csproj" />
     <ProjectReference Include="..\App.Core\App.Core.csproj" />
     <ProjectReference Include="..\App.Infrastructure\App.Infrastructure.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Castle.Windsor">
+      <HintPath>C:\Users\Filipe\.nuget\packages\castle.windsor\4.1.0\lib\netstandard1.6\Castle.Windsor.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
 </Project>

@@ -6,9 +6,9 @@ using Castle.MicroKernel.SubSystems.Configuration;
 using Castle.Windsor;
 using FD.CleanArchitecture.Core.Interactor;
 
-namespace App.Api.Installers
+namespace App.ConsoleInterface.Installers
 {
-    public class UseCaseInstaller : IWindsorInstaller
+    public class UseCaseInstaller : IWindsorInstaller 
     {
         public void Install(IWindsorContainer container, IConfigurationStore store)
         {
@@ -17,8 +17,8 @@ namespace App.Api.Installers
             container.Register(Component.For<ISearchBlogPostsGateway>()
                 .ImplementedBy<SearchBlogPostsGateway>().LifeStyle.Transient);
 
-            container.Register(Component.For<ISimpleInteractor<SearchBlogPostsRequest, SearchBlogPostsResponse>>()
-              .ImplementedBy<SimpleSearchBlogPostsInteractor>().LifeStyle.Transient);
+            container.Register(Component.For<IInteractor<SearchBlogPostsRequest, SearchBlogPostsResponse>>()
+                .ImplementedBy<SearchBlogPostsInteractor>().LifeStyle.Transient);
 
             container.Register(Component.For<IInteractorsFactory>().AsFactory());
         }
