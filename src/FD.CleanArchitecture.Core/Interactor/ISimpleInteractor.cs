@@ -2,6 +2,7 @@
 
 namespace FD.CleanArchitecture.Core.Interactor
 {
+    /// <inheritdoc />
     /// <summary>
     /// Simple interactor. 
     /// No outputboundary. Returns the ResponseModel to the Interactor caller. 

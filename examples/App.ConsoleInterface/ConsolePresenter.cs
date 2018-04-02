@@ -1,13 +1,11 @@
-﻿using System;
-using App.Core.UseCases.SearchBlogPosts;
+﻿using App.Core.UseCases.SearchBlogPosts;
 using FD.CleanArchitecture.Core.Boundary;
+using System;
 
 namespace App.ConsoleInterface
 {
     public class ConsolePresenter : IOutputBoundary<SearchBlogPostsResponse>
     {
-      
-
         public void PublishSuccess(SearchBlogPostsResponse response)
         {
             foreach (var blg in response.Post)

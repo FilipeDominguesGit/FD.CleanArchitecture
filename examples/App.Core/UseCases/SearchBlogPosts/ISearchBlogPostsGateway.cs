@@ -1,5 +1,5 @@
-﻿using System.Collections.Generic;
-using App.Core.Entities;
+﻿using App.Core.Entities;
+using System.Collections.Generic;
 
 namespace App.Core.UseCases.SearchBlogPosts
 {

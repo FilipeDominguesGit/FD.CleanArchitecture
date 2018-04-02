@@ -1,7 +1,7 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using App.Api.ViewModel;
+﻿using App.Api.ViewModel;
 using App.Core.UseCases.SearchBlogPosts;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace App.Api.Extensions
 {

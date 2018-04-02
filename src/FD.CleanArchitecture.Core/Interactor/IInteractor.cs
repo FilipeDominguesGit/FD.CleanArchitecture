@@ -2,6 +2,7 @@
 
 namespace FD.CleanArchitecture.Core.Interactor
 {
+    /// <inheritdoc />
     /// <summary>
     /// Interactor as described by Robert C. Martin.
     /// </summary>

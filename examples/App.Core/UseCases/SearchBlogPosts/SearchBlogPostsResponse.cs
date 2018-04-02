@@ -1,6 +1,5 @@
-﻿using System;
+﻿using FD.CleanArchitecture.Core.Boundary;
 using System.Collections.Generic;
-using FD.CleanArchitecture.Core.Boundary;
 
 namespace App.Core.UseCases.SearchBlogPosts
 {
@@ -13,12 +12,4 @@ namespace App.Core.UseCases.SearchBlogPosts
             Post = post;
         }
     }
-
-    public class BlogSearchResultDto
-    {
-        public Guid Id { get; set; }
-        public string Title { get; set; }
-        public DateTime CreationDate { get; set; }
-    }
-
 }

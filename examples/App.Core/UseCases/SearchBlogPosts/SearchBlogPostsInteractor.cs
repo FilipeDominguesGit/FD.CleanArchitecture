@@ -1,7 +1,7 @@
-﻿using System;
-using System.Linq;
-using FD.CleanArchitecture.Core.Boundary;
+﻿using FD.CleanArchitecture.Core.Boundary;
 using FD.CleanArchitecture.Core.Interactor;
+using System;
+using System.Linq;
 
 namespace App.Core.UseCases.SearchBlogPosts
 {

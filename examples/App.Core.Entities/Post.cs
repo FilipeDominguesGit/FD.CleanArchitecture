@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace App.Core.Entities
 {
-    public class Post //: IEntity
+    public class Post
     {
         public Guid Id { get; set; }
         public string Title { get; set; }

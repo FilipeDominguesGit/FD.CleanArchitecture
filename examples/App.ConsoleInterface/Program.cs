@@ -20,11 +20,8 @@ namespace App.ConsoleInterface
             var outputboundary = new ConsolePresenter();
             var request = new SearchBlogPostsRequest(string.Empty, null, null);
             var usecase = factory.Create<SearchBlogPostsRequest, SearchBlogPostsResponse>(outputboundary);
-
-            //var outputBoundary = new ConsolePresenter();
-            //var gateway = new SearchBlogPostsGateway();
-            //var usecase = new SearchBlogPostsInteractor(gateway, outputBoundary);
             usecase.Execute(request);
+
             Console.ReadKey();
 
         }

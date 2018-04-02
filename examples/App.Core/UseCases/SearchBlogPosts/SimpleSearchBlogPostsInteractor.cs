@@ -1,6 +1,6 @@
-﻿using System;
+﻿using FD.CleanArchitecture.Core.Interactor;
+using System;
 using System.Linq;
-using FD.CleanArchitecture.Core.Interactor;
 
 namespace App.Core.UseCases.SearchBlogPosts
 {

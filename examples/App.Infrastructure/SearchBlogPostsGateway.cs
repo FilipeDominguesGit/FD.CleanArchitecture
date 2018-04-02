@@ -1,7 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using App.Core.Entities;
+﻿using App.Core.Entities;
 using App.Core.UseCases.SearchBlogPosts;
+using System;
+using System.Collections.Generic;
 
 namespace App.Infrastructure
 {
