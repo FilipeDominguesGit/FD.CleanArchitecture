@@ -10,7 +10,7 @@ We do not expect changes in this layer to affect the entities. We also do not ex
 We do, however, expect that changes to the operation of the application will affect the use-cases and therefore the software in this layer. If the details of a use-case change, then some code in this layer will certainly be affected.
 
 
-```C#
+```csharp
  public interface IInteractor<in TRequest,TResponse> : IInputBoundary<TRequest> where TRequest : IRequest where TResponse : IResponse
 {
     IOutputBoundary<TResponse> OutputBoundary { get; set; }
