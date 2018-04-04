@@ -18,7 +18,7 @@ We do, however, expect that changes to the operation of the application will aff
 
 ```
 
-An interactor should Implement the `Input boundary` and Contain an interface for the `Output Boundary` to be implemented by a "Presenter" responsible to transform the `Response Model` into a `View Model` to be used by the View. 
-The `Output Boundary Interface` (IOutputBoundary on my project) is implemented on the `Interface Adapters` layer.
+An interactor should implement the `input boundary` and contain a reference for the interface of the `output boundary`. The responsability of the implementation of the `output boundary` is to transform the `response model` into a `view model` to be used by the view. 
+The `output boundary` interface (IOutputBoundary on my project) should be implemented on the `interface adapters` layer.
 
 [back](./)
