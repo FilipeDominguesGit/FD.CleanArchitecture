@@ -9,6 +9,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{1D330CE2-7
 	ProjectSection(SolutionItems) = preProject
 		docs\entities.md = docs\entities.md
 		docs\index.md = docs\index.md
+		docs\interactors.md = docs\interactors.md
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{C84BB445-BEED-4D48-8E2A-0BCA13023580}"
