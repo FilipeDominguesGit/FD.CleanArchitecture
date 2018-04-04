@@ -7,7 +7,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{372B94AF-F51
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{1D330CE2-708C-4019-BE93-00C070D4DBCF}"
 	ProjectSection(SolutionItems) = preProject
-		docs\Index.md = docs\Index.md
+		docs\entities.md = docs\entities.md
+		docs\index.md = docs\index.md
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{C84BB445-BEED-4D48-8E2A-0BCA13023580}"
