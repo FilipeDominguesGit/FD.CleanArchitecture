@@ -1,7 +1,7 @@
 ﻿---
 layout: default
 ---
-# Interactors
+# Interactors / Use Cases
 
 The software in this layer contains application specific business rules. It encapsulates and implements all of the use cases of the system. These use cases orchestrate the flow of data to and from the entities, and direct those entities to use their enterprise wide business rules to achieve the goals of the use case.
 
@@ -17,5 +17,8 @@ We do, however, expect that changes to the operation of the application will aff
 }
 
 ```
+
+An interactor should Implement the `Input boundary` and Contain an interface for the `Output Boundary` to be implemented by a "Presenter" responsible to transform the `Response Model` into a `View Model` to be used by the View. 
+The `Output Boundary Interface` (IOutputBoundary on my project) is implemented on the `Interface Adapters` layer.
 
 [back](./)
