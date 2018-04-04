@@ -7,8 +7,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{372B94AF-F51
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{1D330CE2-708C-4019-BE93-00C070D4DBCF}"
 	ProjectSection(SolutionItems) = preProject
-		docs\Docs.md = docs\Docs.md
-		docs\index.html = docs\index.html
+		docs\Index.md = docs\Index.md
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{C84BB445-BEED-4D48-8E2A-0BCA13023580}"
@@ -29,6 +28,11 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "App.Core.Entities", "examples\App.Core.Entities\App.Core.Entities.csproj", "{E0B17C36-D5D2-4605-B420-9959A0D59CF0}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "App.Infrastructure", "examples\App.Infrastructure\App.Infrastructure.csproj", "{1CE06A23-FE27-4BAB-ADEC-F0F5A153D520}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{B9834A59-6EAF-4DB6-8144-6BEA7BAFEEF9}"
+	ProjectSection(SolutionItems) = preProject
+		docs\_config.yml = docs\_config.yml
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -1,1 +1,5 @@
-theme: jekyll-theme-minimal
+title: Clean Architecture
+description: Screaming Architecture.
+show_downloads: true
+google_analytics:
+theme: jekyll-theme-architect
