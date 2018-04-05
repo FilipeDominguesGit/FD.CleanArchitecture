@@ -7,7 +7,7 @@ layout: default
 >
 >If you don’t have an enterprise, and are just writing a single application, then these entities are the business objects of the application. They encapsulate the most general and high-level rules. They are the least likely to change when something external changes. For example, you would not expect these objects to be affected by a change to page navigation, or security. No operational change to any particular application should affect the entity layer.
 
-**[Robert C Martin Clean Architecture blog post](https://8thlight.com/blog/uncle-bob/2012/08/13/the-clean-architecture.html "Clean Architecture")**
+[Robert C Martin Clean Architecture blog post](https://8thlight.com/blog/uncle-bob/2012/08/13/the-clean-architecture.html "Clean Architecture")
 
 ---
 
@@ -25,7 +25,7 @@ layout: default
 >
 >And remember, we are all pirates by nature; and the rules I'm talking about here are really more like guidelines..."
 
-**[Robert C Martin forum response about entities](https://groups.google.com/forum/#!topic/clean-code-discussion/mvP_NR2MUPc "Robert C Martin forum response")**
+[Robert C Martin forum response about entities](https://groups.google.com/forum/#!topic/clean-code-discussion/mvP_NR2MUPc "Robert C Martin forum response")
 
 ---
 
@@ -35,7 +35,7 @@ layout: default
 >interactors modify entities
 >An entity can contain other entities: a Gopher, could technically possess a Tail and two Eyes, and it can modify them at will. This hierarchy is strictly unidirectional: a Gopher doesn’t know about other gophers, more importantly, it doesn’t know about the interactor.
 
-**[EBI entities article](http://ebi.readthedocs.io/en/latest/core.html#entities "EBI entities article")**
+[EBI entities article](http://ebi.readthedocs.io/en/latest/core.html#entities "EBI entities article")
 
 ---
 
