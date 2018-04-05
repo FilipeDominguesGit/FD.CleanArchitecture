@@ -17,13 +17,13 @@ layout: default
 >Gateways return Entities.  The implementation (below the line) fetches the data from the database, and uses it to construct data structures which are then passed to the Entities.  This can be done either with containment or inheritance.
 >
 >For example:  
->
->public class MyEntity { private MyDataStructure data;}
->
+> ```java
+> public class MyEntity { private MyDataStructure data;}
+> ```
 >or
->
+> ```java
 >public class MyEntity extends MyDataStructure {...}
->
+> ```
 >And remember, we are all pirates by nature; and the rules I'm talking about here are really more like guidelines..."
 
 **Ref:** [Robert C Martin forum response about entities](https://groups.google.com/forum/#!topic/clean-code-discussion/mvP_NR2MUPc "Robert C Martin forum response")
