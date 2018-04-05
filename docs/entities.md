@@ -42,4 +42,11 @@ layout: default
 ---
 
 
+>Beginners may sometime only use entity object as data carriers and place all dynamic behaviour in control objects `**Note:(Control objects are the Interactors/UseCases not to be confused with Controllers in MVC)**` […]. This should, however be avoided. […] Instead, quite a lot of behaviour should be placed in the entity objects.
+>
+
+**Ref:** [Ivar Jacobson 1992, pp. 134](https://www.goodreads.com/book/show/296981.Object_Oriented_Software_Engineering "Object-Oriented Software Engineering")
+
+---
+
 [back](./)
