@@ -7,7 +7,7 @@ layout: default
 >
 >If you don’t have an enterprise, and are just writing a single application, then these entities are the business objects of the application. They encapsulate the most general and high-level rules. They are the least likely to change when something external changes. For example, you would not expect these objects to be affected by a change to page navigation, or security. No operational change to any particular application should affect the entity layer.
 
-**https://8thlight.com/blog/uncle-bob/2012/08/13/the-clean-architecture.html**
+**[Robert C Martin Clean Architecture blog post](https://8thlight.com/blog/uncle-bob/2012/08/13/the-clean-architecture.html "Clean Architecture")**
 
 
 >"My view of Entities is that they contain Application Independent Business rules.  They are not simply data objects.  They may hold references to data objects; but their purpose is to implement business rule methods that can be used by many different applications.
